@@ -155,7 +155,7 @@ func (c *prodServiceClient) GetProdStock(ctx context.Context, in *ProdRequest, o
 	return out, nil
 }
 
-// ProdServiceServer is the server API for ProdService service.
+// ProdServiceServer is the serverCtr API for ProdService service.
 type ProdServiceServer interface {
 	GetProdStock(context.Context, *ProdRequest) (*ProdResponse, error)
 }

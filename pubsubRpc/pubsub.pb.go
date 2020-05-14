@@ -147,7 +147,7 @@ func (x *pubSubServiceSubscribeClient) Recv() (*String, error) {
 	return m, nil
 }
 
-// PubSubServiceServer is the server API for PubSubService service.
+// PubSubServiceServer is the serverCtr API for PubSubService service.
 type PubSubServiceServer interface {
 	Publish(context.Context, *String) (*String, error)
 	Subscribe(*String, PubSubService_SubscribeServer) error

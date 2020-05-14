@@ -4,7 +4,8 @@ import (
 	"context"
 	"fmt"
 	"google.golang.org/grpc"
-	"grpcClient/hellogrpc"
+	"grpcClient/certificattedRpc"
+	"grpcClient/certificattedRpc/tokenCertication/token"
 	"io"
 	"log"
 	"math/rand"
@@ -13,14 +14,20 @@ import (
 )
 
 func main() {
-	conn, err := grpc.Dial("localhost:1107", grpc.WithInsecure())
+	auth := token.Authentication{
+		User:     "wxning",
+		Password: "gopher",
+	}
+
+	conn, err := grpc.Dial("localhost:1107", grpc.WithInsecure(), grpc.WithPerRPCCredentials(&auth))
+
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer conn.Close()
 
-	client := hellogrpc.NewHelloServiceClient(conn)
-	reply, err := client.Hello(context.Background(), &hellogrpc.String{Value: " grpc"})
+	client := certificattedRpc.NewHelloServiceClient(conn)
+	reply, err := client.Hello(context.Background(), &certificattedRpc.String{Value: " grpc"})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -35,7 +42,7 @@ func main() {
 	go func() {
 		for {
 			num := rand.Intn(100)
-			if err := stream.Send(&hellogrpc.String{Value: "grpc" + strconv.Itoa(num)}); err != nil {
+			if err := stream.Send(&certificattedRpc.String{Value: "grpc" + strconv.Itoa(num)}); err != nil {
 				log.Fatal(err)
 			}
 			time.Sleep(time.Second)
@@ -52,7 +59,6 @@ func main() {
 		}
 
 		fmt.Println(reply.GetValue())
-
 
 	}
 }

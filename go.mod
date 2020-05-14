@@ -3,6 +3,7 @@ module grpcClient
 go 1.14
 
 require (
+	github.com/EDDYCJY/go-grpc-example v0.0.0-20181014074047-0f68708edbcb // indirect
 	github.com/docker/docker v1.13.1
 	github.com/golang/protobuf v1.4.1
 	golang.org/x/net v0.0.0-20200506145744-7e3656a0809f // indirect

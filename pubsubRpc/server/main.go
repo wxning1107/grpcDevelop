@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/docker/docker/pkg/pubsub"
 	"google.golang.org/grpc"
-	pb "grpcClient/hello"
+	pb "grpcClient/pubsubRpc"
 	"log"
 	"net"
 	"strings"
@@ -31,7 +31,7 @@ func (p *PubSubService) Subscribe(arg *pb.String, stream pb.PubSubService_Subscr
 	})
 
 	for v := range ch {
-		if err := stream.Send(&pb.String{Value:v.(string)}); err != nil {
+		if err := stream.Send(&pb.String{Value: v.(string)}); err != nil {
 			return err
 		}
 	}

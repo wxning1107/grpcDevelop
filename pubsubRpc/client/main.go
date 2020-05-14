@@ -2,10 +2,8 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"google.golang.org/grpc"
-	pubsub "grpcClient/hello"
-	"io"
+	pubsub "grpcClient/pubsubRpc"
 	"log"
 )
 
@@ -17,22 +15,13 @@ func main() {
 	defer conn.Close()
 
 	client := pubsub.NewPubSubServiceClient(conn)
-
-	stream, err := client.Subscribe(context.Background(), &pubsub.String{Value: "Golang:"})
+	_, err = client.Publish(context.Background(), &pubsub.String{Value: "Golang: hello Go"})
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	for {
-		reply, err := stream.Recv()
-		if err != nil {
-			if err == io.EOF {
-				break
-			}
-			log.Fatal(err)
-		}
-
-		fmt.Println(reply)
+	_, err = client.Publish(context.Background(), &pubsub.String{Value: "docekr: hello docker"})
+	if err != nil {
+		log.Fatal(err)
 	}
-
 }
