@@ -67,19 +67,6 @@ func (p *myGrpcServer) Channel(stream certificattedRpc.HelloService_ChannelServe
 	}
 }
 
-// 拦截器
-func filter(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (resp interface{}, err error) {
-	log.Println("filter:", info)
-
-	defer func() {
-		if r := recover(); r != nil {
-			err = fmt.Errorf("panic: %v", r)
-		}
-	}()
-
-	return handler(ctx, req)
-}
-
 func main() {
 	//grpcServer := grpc.NewServer(grpc.UnaryInterceptor(filter))
 	grpcServer := grpc.NewServer()
@@ -87,7 +74,7 @@ func main() {
 
 	listener, err := net.Listen("tcp", port)
 	if err != nil {
-		log.Panicf("could not list on %s: %s", port, err)
+		log.Panicf("could not listen on %s: %s", port, err)
 	}
 
 	if err := grpcServer.Serve(listener); err != nil {
