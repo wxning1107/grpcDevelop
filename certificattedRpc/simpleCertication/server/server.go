@@ -26,7 +26,7 @@ type HelloService struct {
 }
 
 func (p *HelloService) Hello(ctx context.Context, args *certificattedRpc.String) (*certificattedRpc.String, error) {
-	reply := &certificattedRpc.String{Value: "pubsubRpc" + args.GetValue()}
+	reply := &certificattedRpc.String{Value: "pubsubGrpc" + args.GetValue()}
 
 	return reply, nil
 }
@@ -41,7 +41,7 @@ func (p *HelloService) Channel(stream certificattedRpc.HelloService_ChannelServe
 			return err
 		}
 
-		reply := &certificattedRpc.String{Value: "pubsubRpc " + args.GetValue()}
+		reply := &certificattedRpc.String{Value: "pubsubGrpc " + args.GetValue()}
 
 		err = stream.Send(reply)
 		if err != nil {

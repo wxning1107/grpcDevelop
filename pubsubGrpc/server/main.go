@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/docker/docker/pkg/pubsub"
 	"google.golang.org/grpc"
-	pb "grpcClient/pubsubRpc"
+	pb "grpcClient/pubsubGrpc"
 	"log"
 	"net"
 	"strings"

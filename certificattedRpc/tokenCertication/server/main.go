@@ -49,6 +49,27 @@ func (p *myGrpcServer) Hello(ctx context.Context, args *certificattedRpc.String)
 }
 
 func (p *myGrpcServer) Channel(stream certificattedRpc.HelloService_ChannelServer) error {
+	md, ok := metadata.FromIncomingContext(stream.Context())
+	if !ok {
+		return fmt.Errorf("missing credentials")
+	}
+
+	var (
+		appId  string
+		appKey string
+	)
+
+	if val, ok := md["user"]; ok {
+		appId = val[0]
+	}
+	if val, ok := md["password"]; ok {
+		appKey = val[0]
+	}
+
+	if appId != "wxning" || appKey != "gopher" {
+		return status.Errorf(codes.Unauthenticated, "invalid token: appId=%s, appKey=%s", appId, appKey)
+	}
+
 	for {
 		args, err := stream.Recv()
 		if err != nil {
