@@ -40,7 +40,7 @@ func (p *HelloService) Channel(stream certificattedRpc.HelloService_ChannelServe
 			return err
 		}
 
-		reply := &certificattedRpc.String{Value: "pubsubGrpc " + args.GetValue()}
+		reply := &certificattedRpc.String{Value: "grpc: " + args.GetValue()}
 
 		err = stream.Send(reply)
 		if err != nil {
@@ -60,14 +60,13 @@ func startServer() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-		_, _ = fmt.Fprintf(writer, "grpc with web")
+		_, _ = fmt.Fprintln(writer, "grpc with web")
 	})
 
 	http.ListenAndServeTLS(port, serverCrt, serverKey, http.HandlerFunc(func(writer http.ResponseWriter, request *http.Request) {
 		if request.ProtoMajor == 2 && strings.Contains(request.Header.Get("Content-Type"), "application/grpc") {
 			grpcServer.ServeHTTP(writer, request)
 		} else {
-			print(11111)
 			mux.ServeHTTP(writer, request)
 		}
 	}))

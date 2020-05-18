@@ -43,6 +43,7 @@ func (p *HelloService) Channel(stream certificattedRpc.HelloService_ChannelServe
 
 func main() {
 	grpcServer := grpc.NewServer()
+	// RegisterHelloServiceServer把HelloService的方法反射给grpcServer
 	certificattedRpc.RegisterHelloServiceServer(grpcServer, new(HelloService))
 
 	listener, err := net.Listen("tcp", port)

@@ -2,12 +2,9 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/metadata"
-	"google.golang.org/grpc/status"
 	"grpcClient/certificattedRpc"
+	"grpcClient/certificattedRpc/tokenCertication/token"
 	"io"
 	"log"
 	"net"
@@ -18,29 +15,34 @@ var (
 )
 
 type myGrpcServer struct {
+	auth *token.Authentication
 }
 
 func (p *myGrpcServer) Hello(ctx context.Context, args *certificattedRpc.String) (*certificattedRpc.String, error) {
-	md, ok := metadata.FromIncomingContext(ctx)
-	if !ok {
-		return nil, fmt.Errorf("missing credentials")
-	}
+	//md, ok := metadata.FromIncomingContext(ctx)
+	//if !ok {
+	//	return nil, fmt.Errorf("missing credentials")
+	//}
+	//
+	//var (
+	//	appId  string
+	//	appKey string
+	//)
+	//
+	//if val, ok := md["user"]; ok {
+	//	appId = val[0]
+	//}
+	//if val, ok := md["password"]; ok {
+	//	appKey = val[0]
+	//}
+	//
+	//if appId != "wxning" || appKey != "gopher" {
+	//
+	//	return nil, status.Errorf(codes.Unauthenticated, "invalid token: appId=%s, appKey=%s", appId, appKey)
+	//}
 
-	var (
-		appId  string
-		appKey string
-	)
-
-	if val, ok := md["user"]; ok {
-		appId = val[0]
-	}
-	if val, ok := md["password"]; ok {
-		appKey = val[0]
-	}
-
-	if appId != "wxning" || appKey != "gopher" {
-
-		return nil, status.Errorf(codes.Unauthenticated, "invalid token: appId=%s, appKey=%s", appId, appKey)
+	if err := p.auth.Auth(ctx); err != nil {
+		return nil, err
 	}
 
 	reply := &certificattedRpc.String{Value: "hello" + args.GetValue()}
@@ -49,25 +51,29 @@ func (p *myGrpcServer) Hello(ctx context.Context, args *certificattedRpc.String)
 }
 
 func (p *myGrpcServer) Channel(stream certificattedRpc.HelloService_ChannelServer) error {
-	md, ok := metadata.FromIncomingContext(stream.Context())
-	if !ok {
-		return fmt.Errorf("missing credentials")
-	}
+	//md, ok := metadata.FromIncomingContext(stream.Context())
+	//if !ok {
+	//	return fmt.Errorf("missing credentials")
+	//}
+	//
+	//var (
+	//	appId  string
+	//	appKey string
+	//)
+	//
+	//if val, ok := md["user"]; ok {
+	//	appId = val[0]
+	//}
+	//if val, ok := md["password"]; ok {
+	//	appKey = val[0]
+	//}
+	//
+	//if appId != "wxning" || appKey != "gopher" {
+	//	return status.Errorf(codes.Unauthenticated, "invalid token: appId=%s, appKey=%s", appId, appKey)
+	//}
 
-	var (
-		appId  string
-		appKey string
-	)
-
-	if val, ok := md["user"]; ok {
-		appId = val[0]
-	}
-	if val, ok := md["password"]; ok {
-		appKey = val[0]
-	}
-
-	if appId != "wxning" || appKey != "gopher" {
-		return status.Errorf(codes.Unauthenticated, "invalid token: appId=%s, appKey=%s", appId, appKey)
+	if err := p.auth.Auth(stream.Context()); err != nil {
+		return err
 	}
 
 	for {

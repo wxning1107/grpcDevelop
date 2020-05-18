@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e4cf24f-b947-4cea-9d59-ab467f1b5fb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grpcWithWeb/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpcWithWeb/services/hello.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpcWithWeb/services/hello.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simpleGrpc/client/client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simpleGrpc/hello.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simpleGrpc/hello.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simpleGrpc/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/certificattedRpc/interceptor/tokenInterceptor/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/certificattedRpc/interceptor/tokenInterceptor/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/certificattedRpc/simpleCertication/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/certificattedRpc/simpleCertication/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/certificattedRpc/tokenCertication/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/certificattedRpc/tokenCertication/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubsubRpc/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pubsubGrpc/client/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubsubRpc/clientSub/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pubsubGrpc/clientSub/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubsubRpc/pubsub.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/pubsubGrpc/pubsub.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubsubRpc/pubsub.proto" beforeDir="false" afterPath="$PROJECT_DIR$/pubsubGrpc/pubsub.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubsubRpc/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/pubsubGrpc/server/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/certificattedRpc/tokenCertication/token/token.go" beforeDir="false" afterPath="$PROJECT_DIR$/certificattedRpc/tokenCertication/token/token.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpcWithWeb/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpcWithWeb/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simpleGrpc/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/simpleGrpc/server/server.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +172,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加证书" />
     <MESSAGE value="添加token认证" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加token认证" />
+    <MESSAGE value="grpc和web共存" />
+    <option name="LAST_COMMIT_MESSAGE" value="grpc和web共存" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
