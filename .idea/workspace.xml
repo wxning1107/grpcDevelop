@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e4cf24f-b947-4cea-9d59-ab467f1b5fb5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/grpcDeadline/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpcDeadline/hello.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpcDeadline/hello.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grpcDeadline/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/certificattedRpc/tokenCertication/server/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/certificattedRpc/tokenCertication/server/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/certificattedRpc/tokenCertication/token/token.go" beforeDir="false" afterPath="$PROJECT_DIR$/certificattedRpc/tokenCertication/token/token.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grpcWithWeb/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/grpcWithWeb/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simpleGrpc/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/simpleGrpc/server/server.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +40,16 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/grpcWithWeb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/grpcDeadline" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/grpcDeadline" />
       <recent name="$PROJECT_DIR$/grpcWithWeb" />
       <recent name="$PROJECT_DIR$/simpleGrpc/server" />
       <recent name="$PROJECT_DIR$/simpleGrpc/client" />
       <recent name="$PROJECT_DIR$/simpleGrpc" />
-      <recent name="$PROJECT_DIR$/server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/grpcWithWeb/services" />
@@ -71,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build grpcClient/grpcWithWeb">
+  <component name="RunManager" selected="Go Build.go build grpcClient/grpcDeadline/client">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -79,24 +79,6 @@
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/" />
       <package value="grpcClient" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build grpcClient/certificattedRpc/interceptor" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="grpcDemo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/certificattedRpc/interceptor/main.go" />
-      <package value="grpcClient/certificattedRpc/interceptor" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build grpcClient/certificattedRpc/interceptor/tokenInterceptor" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="grpcDemo" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/certificattedRpc/interceptor/tokenInterceptor/main.go" />
-      <package value="grpcClient/certificattedRpc/interceptor/tokenInterceptor" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -109,12 +91,21 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build grpcClient/certificattedRpc/tokenCertication/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build grpcClient/grpcDeadline/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/certificattedRpc/tokenCertication/server/main.go" />
-      <package value="grpcClient/certificattedRpc/tokenCertication/server" />
+      <filePath value="$PROJECT_DIR$/grpcDeadline/client/client.go" />
+      <package value="grpcClient/grpcDeadline/client" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build grpcClient/grpcDeadline/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="grpcDemo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/grpcDeadline/server/server.go" />
+      <package value="grpcClient/grpcDeadline/server" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -124,6 +115,15 @@
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/grpcWithWeb/main.go" />
       <package value="grpcClient/grpcWithWeb" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build grpcClient/simpleGrpc/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="grpcDemo" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/simpleGrpc/server/server.go" />
+      <package value="grpcClient/simpleGrpc/server" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -139,19 +139,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build grpcClient/certificattedRpc/tokenCertication/server" />
       <item itemvalue="Go Build.go build grpcClient/certificattedRpc/tokenCertication/client" />
-      <item itemvalue="Go Build.go build grpcClient/certificattedRpc/interceptor" />
-      <item itemvalue="Go Build.go build grpcClient/certificattedRpc/interceptor/tokenInterceptor" />
       <item itemvalue="Go Build.go build grpcClient/grpcWithWeb" />
+      <item itemvalue="Go Build.go build grpcClient/grpcDeadline/server" />
+      <item itemvalue="Go Build.go build grpcClient/grpcDeadline/client" />
+      <item itemvalue="Go Build.go build grpcClient/simpleGrpc/server" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build grpcClient/grpcDeadline/client" />
+        <item itemvalue="Go Build.go build grpcClient/grpcDeadline/server" />
+        <item itemvalue="Go Build.go build grpcClient/simpleGrpc/server" />
         <item itemvalue="Go Build.go build grpcClient/grpcWithWeb" />
         <item itemvalue="Go Build.go build grpcClient/certificattedRpc/tokenCertication/client" />
-        <item itemvalue="Go Build.go build grpcClient/certificattedRpc/tokenCertication/server" />
-        <item itemvalue="Go Build.go build grpcClient/certificattedRpc/interceptor/tokenInterceptor" />
-        <item itemvalue="Go Build.go build grpcClient/certificattedRpc/interceptor" />
       </list>
     </recent_temporary>
   </component>
