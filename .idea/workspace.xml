@@ -2,11 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e4cf24f-b947-4cea-9d59-ab467f1b5fb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/grpcDeadline/client/client.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpcDeadline/hello.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpcDeadline/hello.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grpcDeadline/server/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/examples_test.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/authentication/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/authentication/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/authentication/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/cancellation/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/cancellation/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/cancellation/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/compression/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/compression/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/compression/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/deadline/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/deadline/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/debugging/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/debugging/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/debugging/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/encryption/ALTS/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/encryption/ALTS/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/encryption/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/encryption/TLS/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/encryption/TLS/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/errors/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/errors/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/errors/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/health/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/health/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/health/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/interceptor/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/interceptor/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/interceptor/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/keepalive/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/keepalive/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/keepalive/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/load_balancing/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/load_balancing/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/load_balancing/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/metadata/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/metadata/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/metadata/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/multiplex/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/multiplex/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/multiplex/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/name_resolving/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/name_resolving/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/name_resolving/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/profiling/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/profiling/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/profiling/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/proto/doc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/proto/echo/echo.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/proto/echo/echo.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/reflection/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/reflection/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/retry/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/retry/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/retry/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/wait_for_ready/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/wait_for_ready/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/xds/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/xds/client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/features/xds/server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/gotutorial.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/helloworld/greeter_client/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/helloworld/greeter_server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/helloworld/helloworld/helloworld.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/helloworld/helloworld/helloworld.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/helloworld/mock_helloworld/hw_mock.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/helloworld/mock_helloworld/hw_mock_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/mock_routeguide/rg_mock.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/mock_routeguide/rg_mock_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/routeguide/route_guide.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/routeguide/route_guide.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/server/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/route_guide/testdata/route_guide_db.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raceRpc/client/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raceRpc/config/ca.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raceRpc/config/server/server.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raceRpc/config/server/server.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raceRpc/hello.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raceRpc/hello.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raceRpc/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +122,16 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/grpcDeadline" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/raceRpc" />
       <recent name="$PROJECT_DIR$/grpcDeadline" />
       <recent name="$PROJECT_DIR$/grpcWithWeb" />
       <recent name="$PROJECT_DIR$/simpleGrpc/server" />
-      <recent name="$PROJECT_DIR$/simpleGrpc/client" />
-      <recent name="$PROJECT_DIR$/simpleGrpc" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/grpcWithWeb/services" />
@@ -71,7 +153,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build grpcClient/grpcDeadline/client">
+  <component name="RunManager" selected="Go Build.go build grpcClient">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -82,48 +164,48 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build grpcClient/certificattedRpc/tokenCertication/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build grpcClient" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/certificattedRpc/tokenCertication/client/main.go" />
-      <package value="grpcClient/certificattedRpc/tokenCertication/client" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="grpcClient" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build grpcClient/grpcDeadline/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build grpcClient/examples/helloworld/greeter_client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/grpcDeadline/client/client.go" />
-      <package value="grpcClient/grpcDeadline/client" />
+      <filePath value="$PROJECT_DIR$/examples/helloworld/greeter_client/main.go" />
+      <package value="grpcClient/examples/helloworld/greeter_client" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build grpcClient/grpcDeadline/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build grpcClient/examples/helloworld/greeter_server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/grpcDeadline/server/server.go" />
-      <package value="grpcClient/grpcDeadline/server" />
+      <filePath value="$PROJECT_DIR$/examples/helloworld/greeter_server/main.go" />
+      <package value="grpcClient/examples/helloworld/greeter_server" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build grpcClient/grpcWithWeb" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build grpcClient/raceRpc/client" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/grpcWithWeb/main.go" />
-      <package value="grpcClient/grpcWithWeb" />
+      <filePath value="$PROJECT_DIR$/raceRpc/client/client.go" />
+      <package value="grpcClient/raceRpc/client" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build grpcClient/simpleGrpc/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build grpcClient/raceRpc/server" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="grpcDemo" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/simpleGrpc/server/server.go" />
-      <package value="grpcClient/simpleGrpc/server" />
+      <filePath value="$PROJECT_DIR$/raceRpc/server/server.go" />
+      <package value="grpcClient/raceRpc/server" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -139,19 +221,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build grpcClient/certificattedRpc/tokenCertication/client" />
-      <item itemvalue="Go Build.go build grpcClient/grpcWithWeb" />
-      <item itemvalue="Go Build.go build grpcClient/grpcDeadline/server" />
-      <item itemvalue="Go Build.go build grpcClient/grpcDeadline/client" />
-      <item itemvalue="Go Build.go build grpcClient/simpleGrpc/server" />
+      <item itemvalue="Go Build.go build grpcClient/raceRpc/server" />
+      <item itemvalue="Go Build.go build grpcClient/raceRpc/client" />
+      <item itemvalue="Go Build.go build grpcClient/examples/helloworld/greeter_server" />
+      <item itemvalue="Go Build.go build grpcClient/examples/helloworld/greeter_client" />
+      <item itemvalue="Go Build.go build grpcClient" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build grpcClient/grpcDeadline/client" />
-        <item itemvalue="Go Build.go build grpcClient/grpcDeadline/server" />
-        <item itemvalue="Go Build.go build grpcClient/simpleGrpc/server" />
-        <item itemvalue="Go Build.go build grpcClient/grpcWithWeb" />
-        <item itemvalue="Go Build.go build grpcClient/certificattedRpc/tokenCertication/client" />
+        <item itemvalue="Go Build.go build grpcClient" />
+        <item itemvalue="Go Build.go build grpcClient/examples/helloworld/greeter_client" />
+        <item itemvalue="Go Build.go build grpcClient/examples/helloworld/greeter_server" />
+        <item itemvalue="Go Build.go build grpcClient/raceRpc/server" />
+        <item itemvalue="Go Build.go build grpcClient/raceRpc/client" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +255,8 @@
     <MESSAGE value="添加证书" />
     <MESSAGE value="添加token认证" />
     <MESSAGE value="grpc和web共存" />
-    <option name="LAST_COMMIT_MESSAGE" value="grpc和web共存" />
+    <MESSAGE value="grpc deadline" />
+    <option name="LAST_COMMIT_MESSAGE" value="grpc deadline" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
